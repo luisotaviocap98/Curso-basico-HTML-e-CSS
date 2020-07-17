@@ -1,0 +1,116 @@
+/* maneira de importar um css em outro css
+@import url("estilo.css")*/
+div{
+    /* background-color: #000; */
+    /* color: #FFF; cor do texto */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-size: 30px; */
+    /* text-align: center; */
+    /* text-transform: lowercase; */
+    /* background-image: url(./timao.png); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center top; passa posicao no eixo x e y */
+    /* background-attachment: fixed; deixa a imagem fixa enquanto rola a pagina */
+    /* background-size: cover;cobrir toda a pagina */
+    
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    border: 2px solid red;
+    margin: 10px;
+    box-sizing: border-box; /*faz com que os elementos caibam dentro do tamanho definido de largura e altura, 
+                            ao inves de somar os valores*/
+
+    top:200px;
+    position: absolute; /*posicionamento independente do resto do conteudo, e do fluxo do site*/
+    /* position: relative; permite que haja um absolute, mas que repeite os limites do relative */
+    /* relative, ele segue o fluxo do conteudo, mas pode ter seu posicionamento modificado, pode ser "arrastado" */
+    /* position: fixed; ele fica fixo de acordo com a resolucao da tela */
+
+    /* float para fazer os objetos flutarem pela tela, funciona com posicionamento static ou relative */
+    /* z-index serve para poder alterar a ordem que os objetos sao projetados, dando uma ordem no eixo z */
+
+}
+/* #topo{ mexendo com um seletor com id no html */
+    /* color: red; */
+/* } */
+
+div h1{ /*selecionando atraves de herança (no html ha varios "h1")*/
+    color: red;
+}
+/* outras opcoes
+div > h1 seleciona apenas os h1 filhos de div
+h1+h2 pega o h2 seguinte ao h1
+h1~h2 pega todos h2 seguintas ao h1
+*/
+
+/*pseudo classe de link
+a:link 
+a:visited  (depois de acessado)
+*/
+/*pseudo classe de acao (podem ser usadas em coisas alem de links, como h1, div ...)
+a:hover (ao passar o mouse)
+a:active (quando elemento esta ativo, clicando com o mouse)
+a:focus (foco em cima do elemento)
+*/
+a:hover{
+    font-size: 80px;
+}
+a:active{
+    color: blue;
+}
+a:focus{
+    border: 5px solid gray;
+}
+ol li{
+    background: black;
+    color: white;
+    display: inline-block; /*faz funcionar como um bloco*/
+}
+ol{
+    background: red;
+}
+/* ---------------------------------ZINDEX------------------------------------------------ */
+
+#bloco1,#bloco2,#bloco3{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    font: bold 15px Arial;
+    text-align: center;
+    color: black;
+}
+#bloco1{
+    background-color: red;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    overflow: auto;  
+    /* overflow quando o conteudo estora os limites (hidden, visible, scroll ,auto) */
+    /* scroll sempre cria barra de rolagem, auto depende se o conteudo estrapolar e em qual eixo */
+}
+#bloco2{
+    background-color: blue;
+    left: 100px;
+    top: 100px;
+    z-index: 1;
+}
+#bloco3{
+    background-color: green;
+    left: 200px;
+    top: 200px;
+    z-index: 2;
+}
+/* por padrao o conteudo eh projetado de acordo com a ordem sequencial no html */
+/* z-index vai pela ordem crescente de projecao, o maior numero é o ultimo a ser projetado (fica por cima) */
+/* zindex precisa de postion definido para funcionar (menos static) */
+
+/* min/max (heigth/width) para controlar as dimensoes dos blocos , isso pode ajudar a manter resolucao, quando ultrapassa minimo faz scroll*/
+/* inherit herda valores do bloco/div pai */
+
+#textao{
+    color: red;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 4px 4px 20px black; /*adiciona sombra nas letras (lado, baixo, blur, cor)*/ 
+}

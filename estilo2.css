@@ -1,0 +1,39 @@
+#textao{
+    color: red;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 1px black, 10px 10px 1px blue; /*adiciona sombra nas letras (lado, baixo, blur, cor), da pra adicionar varias sombras*/ 
+}
+/* #bloco1,#bloco2,#bloco3{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    font: bold 15px Arial;
+    text-align: center;
+    color: black;
+} */
+#bloco1{
+    /* background-color: white; */
+    /* left: 0; */
+    /* top: 0; */
+    /* z-index: 3; */
+    font: bold 15px Arial;
+    /* position: relative; */
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* overflow: auto; */
+    box-shadow: inset 10px 10px 10px black; /*inset para acontecer dentro da box*/  
+    /* overflow quando o conteudo estora os limites (hidden, visible, scroll ,auto) */
+    /* scroll sempre cria barra de rolagem, auto depende se o conteudo estrapolar e em qual eixo */
+}
+#bloco2{
+    background-color: blue;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cornsilk;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%; /*colocar contorno na borda do box (sup esq, sup dir, inf dir, inf esq)*/
+}
